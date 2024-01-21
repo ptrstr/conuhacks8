@@ -7,7 +7,8 @@
             <img src="./photorandom.png" alt="Profile Picture" class="w-full h-full object-cover" />
             <!-- Overlay for changing profile picture -->
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <span class="text-white">Change Picture</span>
+                <!-- Wrapped "Change Picture" text with an anchor tag -->
+                <a href="/change-picture" class="text-white">Change Picture</a>
             </div>
         </div>
     </div>
