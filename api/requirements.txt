@@ -2,3 +2,4 @@ fastapi
 fastapi-users[sqlalchemy]
 uvicorn[standard]
 aiosqlite
+bcrypt==4.0.1
