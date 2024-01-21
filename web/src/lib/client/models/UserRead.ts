@@ -10,7 +10,12 @@ export type UserRead = {
     is_verified?: boolean;
     full_name: string;
     avatar: number;
+<<<<<<< HEAD
+    full_name: string;
+    emai: string;
+=======
     skills?: (string | null);
     interests?: (string | null);
+>>>>>>> master
 };
 
