@@ -10,5 +10,7 @@ export type UserCreate = {
     is_verified?: (boolean | null);
     full_name: string;
     avatar: number;
+    skills?: string;
+    interests?: string;
 };
 

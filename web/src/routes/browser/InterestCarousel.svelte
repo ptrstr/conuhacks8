@@ -3,7 +3,7 @@
     // /** @type {number} */
     // export let time;
 
-    import Card from "./Card.svelte";
+    import Card from "../Card.svelte";
 
     // /** @type {string} */
 	// export let content;
@@ -15,7 +15,7 @@
 </script>
 
 <h2 class="text-2xl font-bold">{title}</h2>
-<div class="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+<div class="carousel carousel-center max-w-md p-4 space-x-4 rounded-box">
     {#if $datasource.length == 0}
         <div class="carousel-item">
             <div class="skeleton w-96 aspect-card bg-base-100 shadow-xl"></div>

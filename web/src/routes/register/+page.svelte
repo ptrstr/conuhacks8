@@ -29,7 +29,9 @@
             email: email,
             password: password,
             full_name: full_name,
-            avatar: -1
+            avatar: -1,
+            skills: '',
+            interests: ''
         };
         let result = client.auth.registerRegisterAuthRegisterPost(data);
         result.then((data) => {

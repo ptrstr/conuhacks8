@@ -8,7 +8,9 @@ export type UserUpdate = {
     is_active?: (boolean | null);
     is_superuser?: (boolean | null);
     is_verified?: (boolean | null);
-    full_name: string;
-    avatar: number;
+    full_name?: (string | null);
+    avatar?: (number | null);
+    skills?: (string | null);
+    interests?: (string | null);
 };
 
