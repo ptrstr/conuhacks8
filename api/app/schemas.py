@@ -23,3 +23,8 @@ class Card(BaseModel):
 
 class Feed(BaseModel):
     feed: List[Card]
+
+class Message(BaseModel):
+    author: str
+    content: str
+    time: int

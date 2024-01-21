@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Message from './Message.svelte'
 	import Input from './Input.svelte'
-    import { messages, initWebsocket } from './stores.js';
+    import { messages, initWebsocket, loadMessages } from './stores.js';
     import type { ComponentEvents } from 'svelte';
     import type { PageData } from './$types';
     import { onMount } from 'svelte';
@@ -14,13 +14,14 @@
     }
 
     onMount(() => {
+        loadMessages(data.id);
         initWebsocket(data.id);
     })
 </script>
 
 <div class="container mx-auto h-screen max-w-3xl">
     {#each $messages as message}
-        <Message time={message.time} content={message.content} isSelf={message.isSelf} />
+        <Message time={message.time} content={message.content} author={message.author} />
     {/each}
     <div class="relative">
         <Input on:submit={sendMessage} />

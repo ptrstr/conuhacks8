@@ -8,14 +8,14 @@ import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class DefaultService {
     constructor(public readonly httpRequest: BaseHttpRequest) {}
     /**
-     * Authenticated Route
-     * @returns any Successful Response
+     * Whoami
+     * @returns string Successful Response
      * @throws ApiError
      */
-    public authenticatedRouteAuthenticatedRouteGet(): CancelablePromise<any> {
+    public whoamiWhoamiGet(): CancelablePromise<string> {
         return this.httpRequest.request({
             method: 'GET',
-            url: '/authenticated-route',
+            url: '/whoami',
         });
     }
     /**

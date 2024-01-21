@@ -20,6 +20,7 @@ export type { Card } from './models/Card';
 export type { ErrorModel } from './models/ErrorModel';
 export type { Feed } from './models/Feed';
 export type { HTTPValidationError } from './models/HTTPValidationError';
+export type { Message } from './models/Message';
 export type { UserCreate } from './models/UserCreate';
 export type { UserRead } from './models/UserRead';
 export type { UserUpdate } from './models/UserUpdate';

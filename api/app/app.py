@@ -44,9 +44,9 @@ app.include_router(
 )
 
 
-@app.get("/authenticated-route")
-async def authenticated_route(user: User = Depends(current_active_user)):
-    return {"message": f"Hello {user.email}!"}
+@app.get("/whoami")
+async def whoami(user: User = Depends(current_active_user)) -> str:
+    return str(user.id)
 
 @app.get("/feeds/buddies")
 #async def feeds(user: User = Depends(current_active_user)):

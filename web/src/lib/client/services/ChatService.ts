@@ -2,6 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { Message } from '../models/Message';
 import type { WebSocketKey } from '../models/WebSocketKey';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -10,12 +11,12 @@ export class ChatService {
     /**
      * Read Messages
      * @param otherId
-     * @returns any Successful Response
+     * @returns Message Successful Response
      * @throws ApiError
      */
     public readMessagesChatMessagesOtherIdGet(
         otherId: string,
-    ): CancelablePromise<any> {
+    ): CancelablePromise<Array<Message>> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/chat/messages/{other_id}',
@@ -54,22 +55,13 @@ export class ChatService {
     }
     /**
      * Ws Setup
-     * @param otherId
      * @returns WebSocketKey Successful Response
      * @throws ApiError
      */
-    public wsSetupChatWsSetupOtherIdGet(
-        otherId: string,
-    ): CancelablePromise<WebSocketKey> {
+    public wsSetupChatWsSetupGet(): CancelablePromise<WebSocketKey> {
         return this.httpRequest.request({
             method: 'GET',
-            url: '/chat/ws/setup/{other_id}',
-            path: {
-                'other_id': otherId,
-            },
-            errors: {
-                422: `Validation Error`,
-            },
+            url: '/chat/ws/setup',
         });
     }
 }
