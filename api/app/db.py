@@ -18,6 +18,8 @@ class Base(DeclarativeBase):
 class User(SQLAlchemyBaseUserTableUUID, Base):
     full_name = Column(String)
     avatar = Column(Integer)
+    skills = Column(String)
+    interests = Column(String)
 
 
 class Message(Base):

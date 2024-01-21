@@ -16,8 +16,9 @@ async function getUsers(data) {
 }
 
 export async function loadFeeds() {
+    if ((await client.users.usersCurrentUserUsersMeGet()).skills === '')
+        document.location.href = '/selectinterest';
+
     client.default.feedBuddiesFeedsBuddiesGet().then(async (f) => feedBuddies.set(await getUsers(f)));
     client.default.feedDiscoveryFeedsDiscoveryGet().then(async (f) => feedDiscovery.set(await getUsers(f)));
-
-    console.log(feedBuddies);
 }

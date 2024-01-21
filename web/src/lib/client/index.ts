@@ -19,6 +19,7 @@ export type { Body_verify_verify_auth_verify_post } from './models/Body_verify_v
 export type { ErrorModel } from './models/ErrorModel';
 export type { HTTPValidationError } from './models/HTTPValidationError';
 export type { Message } from './models/Message';
+export type { Skill } from './models/Skill';
 export type { UserCreate } from './models/UserCreate';
 export type { UserRead } from './models/UserRead';
 export type { UserUpdate } from './models/UserUpdate';

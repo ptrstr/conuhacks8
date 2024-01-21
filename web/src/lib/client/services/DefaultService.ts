@@ -2,6 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { Skill } from '../models/Skill';
 import type { UserRead } from '../models/UserRead';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -58,6 +59,17 @@ export class DefaultService {
         return this.httpRequest.request({
             method: 'GET',
             url: '/feeds/discovery',
+        });
+    }
+    /**
+     * Skills
+     * @returns Skill Successful Response
+     * @throws ApiError
+     */
+    public skillsSkillsGet(): CancelablePromise<Array<Skill>> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/skills',
         });
     }
 }
