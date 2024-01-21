@@ -28,7 +28,8 @@
         let data: UserCreate = {
             email: email,
             password: password,
-            full_name: full_name
+            full_name: full_name,
+            avatar: -1
         };
         let result = client.auth.registerRegisterAuthRegisterPost(data);
         result.then((data) => {

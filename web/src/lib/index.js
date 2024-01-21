@@ -7,7 +7,41 @@ export function setJwt(jwt) {
     localStorage.setItem(JWT_KEY_NAME, jwt);
 }
 
+export const getJwt = async () => {
+    try {
+        return localStorage.getItem(JWT_KEY_NAME) || '';
+    } catch (error) {
+        return "";
+    }
+}
+
+/**
+ * @param {number} id
+ */
+export function getImagePath(id) {
+    switch (id) {
+        case 1:
+            return "/avatar/anonymous-avatar.png"
+        case 2:
+            return "/avatar/art-avatar.jpg"
+        case 3:
+            return "/avatar/dog-avatar.jpg"
+        case 4:
+            return "/avatar/eagle-avatar.jpg"
+        case 5:
+            return "/avatar/female-avatar.png"
+        case 6:
+            return "/avatar/godess-avatar.png"
+        case 7:
+            return "/avatar/pinguin-avatar.webp"
+        case 8:
+            return "/avatar/planet-avatar.webp"
+        default:
+            return "./photorandom.png"
+    }
+}
+
 export const client = new AppClient({
     BASE: 'http://127.0.0.1:8000',
-    TOKEN: async () => localStorage.getItem(JWT_KEY_NAME) || ''
+    TOKEN: getJwt
 });

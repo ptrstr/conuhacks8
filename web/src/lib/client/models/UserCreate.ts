@@ -9,5 +9,6 @@ export type UserCreate = {
     is_superuser?: (boolean | null);
     is_verified?: (boolean | null);
     full_name: string;
+    avatar: number;
 };
 
