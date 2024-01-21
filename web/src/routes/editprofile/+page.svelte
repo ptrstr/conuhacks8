@@ -2,11 +2,9 @@
 
     <div class="flex flex-col items-center mr-8">
         <div class="relative w-28 h-28 rounded-full overflow-hidden cursor-pointer">
-            <img src="./photorandom.png" alt="Profile Picture" class="w-full h-full object-cover" />
-
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <span class="text-white">Change Picture</span>
-            </div>
+            <a href="/avatar">
+                <img src="./photorandom.png" alt="Profile Picture" class="w-full h-full object-cover" title="Change Avatar"/>
+            </a>
         </div>
     </div>
 

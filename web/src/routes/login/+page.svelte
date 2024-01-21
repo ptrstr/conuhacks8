@@ -37,12 +37,9 @@
         </div>
         <div class="form-control">
             <label class="input-group input-group-sm">
-                <span>Password: </span>
+                <span>Password: </span><br />
                 <input type="password" name="password" placeholder="Your password" class="input input-bordered w-full max-w-xs" bind:value={password} required><br />
             </label>
-        </div>
-        <div>
-            <a class="link link-secondary" href="/forgot">Forgot your password ?</a>
         </div>
         <div class="flex flex-col md:flex-row my-4 gap-2 md:gap-4 justify-center items-center">
             <button type="submit" class="btn btn-outline btn-primary btn-block max-w-[200px]">Sign In</button>
