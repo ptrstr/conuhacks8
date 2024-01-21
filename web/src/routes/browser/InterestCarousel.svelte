@@ -3,7 +3,7 @@
     // /** @type {number} */
     // export let time;
 
-    import Card from "./Card.svelte";
+    import Card from "../Card.svelte";
 
     // /** @type {string} */
 	// export let content;

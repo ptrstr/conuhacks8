@@ -8,22 +8,22 @@
     onMount(async () => {
         await loadSkills();
         setup();
+
+        window.bob = async function bob(selectedSkillsJson) {
+            let update = {
+                skills: selectedSkillsJson.join(',')
+            }
+            await client.users.usersPatchCurrentUserUsersMePatch(update);
+
+            window.location.href = "/browser";
+        };
     });
 
-    let selectedSkillsJson = [];
-
-    async function bob() {
-        let update = {
-            skills: selectedSkillsJson.join(',')
-        }
-        await client.users.usersPatchUserUsersIdPatch(await getUserId(), update);
-
-        window.location.href = "/browser";
-    }
+    
 </script>
 
 <div class="flex flex-col items-center w-full min-h-screen">
-    <h1 class="text-2xl font-semibold mb-6">Select Your Interests</h1>
+    <h1 class="text-2xl font-semibold mb-6">Select Your Skills</h1>
     <p class="text-2xl font-semibold mb-6">Please choose at least 3</p>
 
     <div
@@ -74,11 +74,11 @@
             const continueBtn = document.getElementById("continueBtn");
 
             continueBtn.addEventListener("click", function () {
-                    selectedSkillsJson = Array.from(checkboxes)
+                    let selectedSkillsJson = Array.from(checkboxes)
                         .filter((checkbox) => checkbox.checked)
                         .map((checkbox) => checkbox.getAttribute('data-type'));
 
-                    bob();
+                    window.bob(selectedSkillsJson);
                 });
 
             checkboxes.forEach((checkbox) => {

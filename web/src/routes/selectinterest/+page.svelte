@@ -8,18 +8,18 @@
     onMount(async () => {
         await loadSkills();
         setup();
+
+        window.bob = async function bob(selectedSkillsJson) {
+            let update = {
+                interests: selectedSkillsJson.join(',')
+            }
+            await client.users.usersPatchCurrentUserUsersMePatch(update);
+
+            window.location.href = "/selectskill";
+        };
     });
 
-    let selectedSkillsJson = [];
-
-    async function bob() {
-        let update = {
-            interests: selectedSkillsJson.join(',')
-        }
-        await client.users.usersPatchUserUsersIdPatch(await getUserId(), update);
-
-        window.location.href = "/selectskill";
-    }
+    
 </script>
 
 <div class="flex flex-col items-center w-full min-h-screen">
@@ -74,11 +74,11 @@
             const continueBtn = document.getElementById("continueBtn");
 
             continueBtn.addEventListener("click", function () {
-                    selectedSkillsJson = Array.from(checkboxes)
+                    let selectedSkillsJson = Array.from(checkboxes)
                         .filter((checkbox) => checkbox.checked)
                         .map((checkbox) => checkbox.getAttribute('data-type'));
 
-                    bob();
+                    window.bob(selectedSkillsJson);
                 });
 
             checkboxes.forEach((checkbox) => {
