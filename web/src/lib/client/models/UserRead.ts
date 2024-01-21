@@ -10,5 +10,7 @@ export type UserRead = {
     is_verified?: boolean;
     full_name: string;
     avatar: number;
+    full_name: string;
+    emai: string;
 };
 
