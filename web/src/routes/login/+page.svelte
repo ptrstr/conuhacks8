@@ -26,7 +26,7 @@
      }
 </script>
 
-<div class="flex flex-col justify-center items-center w-full  min-h-screen">
+<div class="flex flex-col justify-center items-center w-full h-screen">
     <h1 class="text-center text-2xl sm:text-3xl font-semibold my-5">Sign in Your Account</h1>
     <form action="/" id="loginInfo" on:submit|preventDefault={handleSubmit}>
         <div class="form-control">
