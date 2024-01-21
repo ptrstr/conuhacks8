@@ -1,16 +1,39 @@
+<script lang="ts">
+    import { client } from "$lib";
+    import type { Body_auth_jwt_login_auth_jwt_login_post } from "$lib/client";
+    export let email = "";
+    export let password = "";
+
+    
+     async function handleSubmit() {
+        let data: Body_auth_jwt_login_auth_jwt_login_post = {
+            username: email,
+            password: password
+        };
+
+        let result = client.auth.authJwtLoginAuthJwtLoginPost(data);
+        result.then((data) => {
+            document.location.href = "/browser";
+        }).catch((error) => {
+            
+        });
+
+     }
+</script>
+
 <div class="flex flex-col justify-center items-center w-full  min-h-screen">
     <h1 class="text-center text-2xl sm:text-3xl font-semibold my-5">Sign in Your Account</h1>
-    <form action="">
+    <form action="/" id="loginInfo" on:submit|preventDefault={handleSubmit}>
         <div class="form-control">
             <label class="input-group input-group-sm">
-                <span>Username: </span>
-                <input type="text" name="username" placeholder="Your username" class="input input-bordered w-full max-w-xs"><br />
+                <span>Email: </span>
+                <input type="text" name="email" placeholder="Your Email" class="input input-bordered w-full max-w-xs" bind:value={email} required><br />
             </label>
         </div>
         <div class="form-control">
             <label class="input-group input-group-sm">
                 <span>Password: </span>
-                <input type="password" name="password" placeholder="Your password" class="input input-bordered w-full max-w-xs"><br />
+                <input type="password" name="password" placeholder="Your password" class="input input-bordered w-full max-w-xs" bind:value={password} required><br />
             </label>
         </div>
         <div>
@@ -20,4 +43,8 @@
             <input type="submit" value="Sign In" class="btn btn-outline btn-primary btn-block max-w-[200px]" />
         </div>
     </form>
+    <div class="text-center">
+        <span class="">New to KnowTrade ?</span>
+        <a class="link link-secondary" href="/register">Join now</a>
+    </div>
 </div>
