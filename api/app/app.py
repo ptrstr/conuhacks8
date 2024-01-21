@@ -1,8 +1,9 @@
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.db import User, create_db_and_tables
-from app.schemas import UserCreate, UserRead, UserUpdate
+from app.schemas import UserCreate, UserRead, UserUpdate, Feed, Card
 from app.users import auth_backend, current_active_user, fastapi_users
+import app.chat as chat
 
 app = FastAPI()
 
@@ -37,12 +38,25 @@ app.include_router(
     prefix="/users",
     tags=["users"],
 )
+app.include_router(
+    chat.router,
+    prefix='/chat'
+)
 
 
-@app.get("/authenticated-route")
-async def authenticated_route(user: User = Depends(current_active_user)):
-    return {"message": f"Hello {user.email}!"}
+@app.get("/whoami")
+async def whoami(user: User = Depends(current_active_user)) -> str:
+    return str(user.id)
 
+@app.get("/feeds/buddies")
+#async def feeds(user: User = Depends(current_active_user)):
+async def feed_buddies() -> Feed:
+    return Feed(feed=[Card(title='bob', url='https://google.com', image='https://imgv3.fotor.com/images/share/Fotor-free-online-photo-editor.png')])
+
+@app.get("/feeds/discovery")
+#async def feeds(user: User = Depends(current_active_user)):
+async def feed_discovery() -> Feed:
+    return Feed(feed=[Card(title='bob', url='https://google.com', image='https://imgv3.fotor.com/images/share/Fotor-free-online-photo-editor.png')])
 
 @app.on_event("startup")
 async def on_startup():
