@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { client } from "$lib";
+    import { client, setJwt } from "$lib";
     import type { Body_auth_jwt_login_auth_jwt_login_post } from "$lib/client";
     export let email = "";
     export let password = "";
@@ -13,9 +13,14 @@
 
         let result = client.auth.authJwtLoginAuthJwtLoginPost(data);
         result.then((data) => {
+            setJwt(data.access_token);
             document.location.href = "/browser";
         }).catch((error) => {
-            
+            if (error.body.detail === "LOGIN_BAD_CREDENTIALS") {
+                alert("Login or/and Email is/are incorrect.");
+            } else {
+                alert(error.body.detail);
+            }
         });
 
      }
@@ -40,7 +45,7 @@
             <a class="link link-secondary" href="/forgot">Forgot your password ?</a>
         </div>
         <div class="flex flex-col md:flex-row my-4 gap-2 md:gap-4 justify-center items-center">
-            <input type="submit" value="Sign In" class="btn btn-outline btn-primary btn-block max-w-[200px]" />
+            <button type="submit" class="btn btn-outline btn-primary btn-block max-w-[200px]">Sign In</button>
         </div>
     </form>
     <div class="text-center">

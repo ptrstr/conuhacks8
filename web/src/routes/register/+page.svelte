@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { client } from "$lib";
-    import { ApiError, type UserCreate } from "$lib/client";
+    import { client, setJwt } from "$lib";
+    import { type UserCreate } from "$lib/client";
     import PasswordValidator from "password-validator";
     export let full_name = "";
     export let email = "";
@@ -32,10 +32,12 @@
         };
         let result = client.auth.registerRegisterAuthRegisterPost(data);
         result.then((data) => {
-            document.location.href = "/skills";
+            document.location.href = "/login";
         }).catch((error) => {
             if (error.body.detail === "REGISTER_USER_ALREADY_EXISTS") {
                 alert("This email already exists!");
+            } else {
+                alert(error.body.detail);
             }
         });
      }
