@@ -27,5 +27,6 @@ export type { ValidationError } from './models/ValidationError';
 export type { WebSocketKey } from './models/WebSocketKey';
 
 export { AuthService } from './services/AuthService';
+export { ChatService } from './services/ChatService';
 export { DefaultService } from './services/DefaultService';
 export { UsersService } from './services/UsersService';
