@@ -24,7 +24,12 @@ function destroyVanta() {
     vantaInstance.destroy();
   }
 }
+
+function redirectTo(page) {
+    window.location.href = `/${page}`;
+  }
 </script>
+
 
 <style>
 /* Ajoutez d'autres styles CSS si nécessaire */
@@ -107,7 +112,7 @@ nav {
 </div>
 
 <nav>
-<a href="#register">Register</a>
-<a href="#login">Login</a>
-<a href="#about">About Us</a>
+  <a on:click={() => redirectTo('register')}>Register</a>
+  <a on:click={() => redirectTo('login')}>Login</a>
+  <a on:click={() => redirectTo('about')}>About Us</a>
 </nav>
