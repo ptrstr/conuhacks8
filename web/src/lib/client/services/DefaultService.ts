@@ -2,7 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Feed } from '../models/Feed';
+import type { UserRead } from '../models/UserRead';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class DefaultService {
@@ -19,11 +19,31 @@ export class DefaultService {
         });
     }
     /**
-     * Feed Buddies
-     * @returns Feed Successful Response
+     * Get User
+     * @param userId
+     * @returns UserRead Successful Response
      * @throws ApiError
      */
-    public feedBuddiesFeedsBuddiesGet(): CancelablePromise<Feed> {
+    public getUserUserUserIdGet(
+        userId: string,
+    ): CancelablePromise<UserRead> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/user/{user_id}',
+            path: {
+                'user_id': userId,
+            },
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+    /**
+     * Feed Buddies
+     * @returns string Successful Response
+     * @throws ApiError
+     */
+    public feedBuddiesFeedsBuddiesGet(): CancelablePromise<Array<string>> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/feeds/buddies',
@@ -31,10 +51,10 @@ export class DefaultService {
     }
     /**
      * Feed Discovery
-     * @returns Feed Successful Response
+     * @returns string Successful Response
      * @throws ApiError
      */
-    public feedDiscoveryFeedsDiscoveryGet(): CancelablePromise<Feed> {
+    public feedDiscoveryFeedsDiscoveryGet(): CancelablePromise<Array<string>> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/feeds/discovery',

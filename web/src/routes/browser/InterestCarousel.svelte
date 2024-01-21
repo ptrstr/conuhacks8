@@ -1,4 +1,5 @@
 <script>
+    import { getImagePath } from "$lib";
     // /** @type {number} */
     // export let time;
 
@@ -14,15 +15,15 @@
 </script>
 
 <h2 class="text-2xl font-bold">{title}</h2>
-<div class="carousel carousel-center rounded-box space-x-4">
+<div class="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
     {#if $datasource.length == 0}
-        <div class="carousel-item skeleton">
-            
+        <div class="carousel-item">
+            <div class="skeleton w-96 aspect-card bg-base-100 shadow-xl"></div>
         </div>
     {:else}
         {#each $datasource as card}
             <div class="carousel-item">
-                <Card title={card.title} url={card.url} image={card.image} />
+                <Card title={card.full_name} url='/userp/{card.id}' image={getImagePath(card.avatar)} />
             </div>
         {/each}
     {/if}

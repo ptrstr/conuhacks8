@@ -1,3 +1,23 @@
+<script lang="ts">
+  import type { PageData } from './$types';
+  import { onMount } from 'svelte';
+  import { client } from '$lib';
+
+  export let data: PageData;
+
+  export let email: string;
+
+  export let name: string;
+
+  onMount(async () => {
+    let data = await client.default.getUserUserUserIdGet(data.id);
+
+    email = data.email;
+
+    name = data.name;
+  })
+</script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,8 +93,8 @@
   
     <div class="profile-container">
       <img class="profile-image" src="./photoprofil.jpg" alt="Profile Image">
-      <div class="full-name">John Doe</div>
-      <div class="email">john.doe@example.com</div>
+      <div class="full-name">{name}</div>
+      <div class="email">{email}</div>
       
       <div class="skills-and-interests">
         <div class="skill-interest-card">

@@ -6,6 +6,13 @@
     onMount(loadFeeds);
 </script>
 
+
+<style>
+.aspect-card {
+    aspect-ratio: 4/3;
+}
+</style>
+
 <div class="container mx-auto h-screen max-w-3xl">
     <InterestCarousel title="Find new buddies" datasource={feedBuddies} />
 

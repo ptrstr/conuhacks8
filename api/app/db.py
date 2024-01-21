@@ -32,6 +32,15 @@ class Message(Base):
     def to_schema(self):
         return schemas.Message(author=self.user_from, content=self.content, time=self.time)
 
+class Interest(Base):
+    __tablename__ = 'interests'
+
+    id = Column(Integer, primary_key=True)
+    uuid = Column(String)
+    name = Column(String)
+    description = Column(String)
+    image = Column(String)
+
 engine = create_async_engine(DATABASE_URL)
 async_session_maker = async_sessionmaker(engine, expire_on_commit=False)
 

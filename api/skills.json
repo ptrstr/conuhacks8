@@ -1,0 +1,97 @@
+[
+    {
+        "name": "painting",
+        "description": "Expressive art form using various mediums to create visual masterpieces.",
+        "image": "https://cdn.pixabay.com/photo/2019/05/24/16/49/brushes-4226688_960_720.jpg"
+    },
+    {
+        "name": "photography",
+        "description": "Capturing moments and telling stories through the lens of a camera.",
+        "image": "https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_960_720.jpg"
+    },
+    {
+        "name": "gardening",
+        "description": "Nurturing plants and cultivating beautiful outdoor spaces.",
+        "image": "https://cdn.pixabay.com/photo/2015/05/25/14/27/summer-783347_960_720.jpg"
+    },
+    {
+        "name": "cooking",
+        "description": "Crafting delicious meals through the art of combining ingredients and flavors.",
+        "image": "https://cdn.pixabay.com/photo/2017/03/10/13/57/cooking-2132874_960_720.jpg"
+    },
+    {
+        "name": "writing",
+        "description": "Conveying thoughts, ideas, and stories through the written word.",
+        "image": "https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593333_960_720.jpg"
+    },
+    {
+        "name": "coding",
+        "description": "Building digital worlds and solving problems through programming languages.",
+        "image": "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg"
+    },
+    {
+        "name": "singing",
+        "description": "Using the voice as an instrument to convey emotion and melody.",
+        "image": "https://cdn.pixabay.com/photo/2016/01/10/21/05/mic-1132528_960_720.jpg"
+    },
+    {
+        "name": "dancing",
+        "description": "Expressing oneself through rhythmic and coordinated body movements.",
+        "image": "https://cdn.pixabay.com/photo/2016/05/06/17/06/ballerinas-1376250_960_720.jpg"
+    },
+    {
+        "name": "yoga",
+        "description": "Achieving physical and mental well-being through a combination of postures and meditation.",
+        "image": "https://cdn.pixabay.com/photo/2017/11/18/05/02/yoga-2959226_960_720.jpg"
+    },
+    {
+        "name": "hiking",
+        "description": "Exploring and enjoying nature through walking trails and scenic landscapes.",
+        "image": "https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_960_720.jpg"
+    },
+    {
+        "name": "gaming",
+        "description": "Immersing oneself in virtual worlds for entertainment and skill development.",
+        "image": "https://cdn.pixabay.com/photo/2017/05/08/02/22/game-2294201_960_720.jpg"
+    },
+    {
+        "name": "sewing",
+        "description": "Creating and repairing fabric items through needlework.",
+        "image": "https://cdn.pixabay.com/photo/2016/11/19/09/44/antique-1838324_960_720.jpg"
+    },
+    {
+        "name": "pottery",
+        "description": "Shaping clay into functional or artistic objects through the potter's wheel or hand-building techniques.",
+        "image": "https://cdn.pixabay.com/photo/2016/01/13/23/12/clay-1139098_960_720.jpg"
+    },
+    {
+        "name": "knitting",
+        "description": "Creating fabric by interlocking loops of yarn with needles.",
+        "image": "https://cdn.pixabay.com/photo/2015/07/31/15/02/knit-869221_960_720.jpg"
+    },
+    {
+        "name": "surfing",
+        "description": "Riding ocean waves using a surfboard, blending skill and nature.",
+        "image": "https://cdn.pixabay.com/photo/2017/04/08/10/23/surfing-2212948_960_720.jpg"
+    },
+    {
+        "name": "fishing",
+        "description": "Engaging in the art and sport of catching fish.",
+        "image": "https://cdn.pixabay.com/photo/2020/09/03/13/53/fishing-boat-5541327_960_720.jpg"
+    },
+    {
+        "name": "cycling",
+        "description": "Riding bicycles for exercise, transportation, or competitive sports.",
+        "image": "https://cdn.pixabay.com/photo/2015/03/21/14/34/silhouette-683751_960_720.jpg"
+    },
+    {
+        "name": "woodworking",
+        "description": "Crafting functional or artistic items from wood through carving and shaping.",
+        "image": "https://cdn.pixabay.com/photo/2018/11/11/17/13/tool-3809177_960_720.jpg"
+    },
+    {
+        "name": "meditation",
+        "description": "Cultivating mindfulness and inner peace through contemplative practices.",
+        "image": "https://cdn.pixabay.com/photo/2016/11/22/23/29/meditate-1851165_960_720.jpg"
+    }
+]

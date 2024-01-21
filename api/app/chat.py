@@ -27,8 +27,7 @@ async def read_messages(other_id: str, user: User = Depends(current_active_user)
         async with session.begin():
             q = (
                 select(Message)
-                    .filter(Message.user_from == str(user.id))
-                    .filter(other_id == Message.user_to)
+                    .filter((Message.user_from == str(user.id) or other_id == Message.user_to) or (Message.user_from == other_id or str(user.id) == Message.user_to))
             )
 
             result = await session.execute(q)
