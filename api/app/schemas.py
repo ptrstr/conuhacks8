@@ -4,14 +4,14 @@ from pydantic import BaseModel
 from fastapi_users import schemas
 
 class UserRead(schemas.BaseUser[uuid.UUID]):
-    pass
+    avatar: int
 
 class UserCreate(schemas.BaseUserCreate):
     full_name: str
-    pass
+    avatar: int
 
 class UserUpdate(schemas.BaseUserUpdate):
-    pass
+    avatar: int
 
 class WebSocketKey(BaseModel):
     key: str

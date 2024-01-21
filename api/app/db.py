@@ -17,6 +17,7 @@ class Base(DeclarativeBase):
 
 class User(SQLAlchemyBaseUserTableUUID, Base):
     full_name = Column(String)
+    avatar = Column(Integer)
 
 
 class Message(Base):
