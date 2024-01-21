@@ -9,7 +9,7 @@
 	export let image;
 </script>
 
-<div class="card w-96 aspect-card bg-base-100 shadow-xl">
+<div class="card w-96 aspect-card bg-base-100 bg-primary-content shadow-xl">
     <figure><img src="{image}" alt="{image}" /></figure>
     <div class="card-body">
       <h2 class="card-title">{title}</h2>
