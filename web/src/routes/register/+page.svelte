@@ -54,7 +54,7 @@
       </div>
       <div class="form-control my-2">
           <label class="input-group input-group-sm">
-              <span>Email: </span>
+              <span>Email: </span> <br />
               <input type="email" name="email" placeholder="Your email address" class="input input-bordered w-full max-w-xs" bind:value={email} required><br />
           </label>
       </div>

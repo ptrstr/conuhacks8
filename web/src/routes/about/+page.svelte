@@ -1,5 +1,18 @@
-<button class="btn">About daisyUI</button>
-<div role="alert" class="alert">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    <span>12 unread messages. Tap to see.</span>
-  </div>
+<div class="hero min-h-screen">
+    <div class="hero-content">
+      <div class="antialiased min-w-96 max-w-3xl">
+        <h1 class="text-5xl font-bold text-center">About</h1>
+        <h2 class="text-3xl text-start font-sans font-bold">This application</h2>
+        <p class="text-xl py-6">
+            The goal of this website is to provide people with the opportunity 
+            to learn and teach each other. Certainly, you had moments where some of you had
+            an interest in something, but you haven't found a mentor that could help you
+            start your learning, provides feedback, and makes you imporve.
+
+            This website is right for you as it aims to help you find a buddy with whom you can 
+            share your expertise in subjects you are proficient in, while also 
+            learning from someone who has experience in areas you wish to explore.
+        </p>
+      </div>
+    </div>
+</div>
