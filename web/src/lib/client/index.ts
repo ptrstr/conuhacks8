@@ -16,12 +16,15 @@ export type { Body_reset_forgot_password_auth_forgot_password_post } from './mod
 export type { Body_reset_reset_password_auth_reset_password_post } from './models/Body_reset_reset_password_auth_reset_password_post';
 export type { Body_verify_request_token_auth_request_verify_token_post } from './models/Body_verify_request_token_auth_request_verify_token_post';
 export type { Body_verify_verify_auth_verify_post } from './models/Body_verify_verify_auth_verify_post';
+export type { Card } from './models/Card';
 export type { ErrorModel } from './models/ErrorModel';
+export type { Feed } from './models/Feed';
 export type { HTTPValidationError } from './models/HTTPValidationError';
 export type { UserCreate } from './models/UserCreate';
 export type { UserRead } from './models/UserRead';
 export type { UserUpdate } from './models/UserUpdate';
 export type { ValidationError } from './models/ValidationError';
+export type { WebSocketKey } from './models/WebSocketKey';
 
 export { AuthService } from './services/AuthService';
 export { DefaultService } from './services/DefaultService';
